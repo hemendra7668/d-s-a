@@ -67,7 +67,7 @@ if(head == null && tail == null)
         while(temp!=null)
         {
            System.out.println(temp.data);
-           temp= temp.next;
+           temp=3 temp.next;
         }   
     }
     void frst(int data)

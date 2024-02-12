@@ -1,75 +1,82 @@
-//  class ArrayStack {
-//     private int top;
-//     private int size;
-//     private int[] elements;
+class Stack_link{
+private Node head;
 
-//     public ArrayStack(int size)
-//      {
-//         this.top = -1;
-//         this.size = size;
-//         elements = new int[size];
-//     }
+public boolean  isEmpty()
+{
+    return head==null;
+}
+public void push(int data)
+{ 
+Node newnode= new Node(data);
+   if(isEmpty())
+        {
 
-//     public boolean isEmpty() {
-//         return top < 0;
-//     }
+           head = newnode;
+           return ;
+          
+        }
+      else{
+       Node temp = head;
+        head= newnode;
+        newnode.next=temp;
+       
+      }
+       return;
+}
+public int pop()
+{
+    if(isEmpty())
+    {
+        System.out.println("the stack is empty");
+       return Integer.MIN_VALUE;
+    }
+    else{
+int val = head.data;
+head= head.next;
+    return val;
+    }
+}
+public void peek()
+{
+ System.out.println(head.data);
+       
+}
 
-//     public boolean isFull() {
-//         return top >= size - 1;
-//     }
+}
 
-//     public void push(int data) {
-//         if (top == size - 1) {
-//             System.out.println("Stack overflow");
-//             return;
-//         }
-//         elements[++top] = data;
-//     }
 
-//     public int pop() {
-//         if (top < 0) {
-//             System.out.println("Stack underflow");
-//             return -1;
-//         }
-//         System.out.println(elements[top]);
-//         top--;
-//         return elements[top + 1];
-//     }
 
-//     public int peek() {
-//         if (top <= 0) {
-//             System.out.println("Stack underflow");
-//             return -1;
-//         }
-//         System.out.println(elements[top]);
-//         return elements[top];
-//     }
+class Node
+{
+    int data;
+    // Node prev;
+    Node next;
+     Node(int data)
+     {
+        this.data=data;
+     }
+}
 
-//     public void display() {
-//         if (top < 0) {
-//             System.out.println("Stack underflow");
-//             return;
-//         }
-//         for (int i = 0; i <= top; i++) {
-//             System.out.print(elements[i] + "  ");
-//         }
-//         System.out.println();
-//     }
-// }
-//   class Stack{
-//     public static void main(String[]args)
-//     {
-//         ArrayStack ars = new ArrayStack(5);
-//     // ars.isEmpty();
-    
-//     ars.push(2);
-//     ars.push(5);
-//     ars.push(2);
-//     ars.push(92);
-//     ars.display();
-//     // ars.peek();
-// ars.pop();
-//     ars.push(36);
-//     ars.display();
-//     }
-// }
+
+
+class Implem{
+  public static void main(String[]args)
+    {
+        Stack_link sl = new Stack_link();
+        sl.push(20);
+        sl.push(10);
+        sl.push(80);
+        sl.push(50);
+        sl.push(80);
+        sl.push(1000);
+        sl.peek();
+      int value=  sl.pop();
+      System.out.println("the top value of the stack is:-"+value+"now deleted");
+      sl.peek();
+        System.out.println(sl.isEmpty());
+        
+    }
+}
+
+
+
