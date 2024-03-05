@@ -138,8 +138,7 @@ return -1;
 //     }
 // }
 
-public void midnode()
-{
+public void midnode(){
     Node slow = head;
     Node fast = head;
     while(fast!=null && fast.next!=null)
