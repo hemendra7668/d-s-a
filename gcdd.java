@@ -1,28 +1,22 @@
-class Gcd{
+class Gcd {
 
+    public static int gc(int a, int b) {
 
- public static int gc(int a, int b)
- {
-
-    int c = b;
-while(c>0)
-{
-    if(a%c==0)
-    {
-        break;
+        int c = b;
+        while (c > 0) {
+            if (a % c == 0) {
+                break;
+            }
+            c--;
+        }
+        return c;
     }
-    c--;
-}
 
- }
+    public static void main(String[] args) {
+        int a = 9, b = 4;
 
-
-    public static void main(String[]args)
-    {
-
-
-int res= gc(a,b);
-System.out.println();
+        int res = gc(a, b);
+        System.out.println();
     }
 
 }

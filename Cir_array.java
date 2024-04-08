@@ -5,14 +5,12 @@ class Circular_array {
     int front = -1;
     int rear = -1;
 
- boolean is_empty()
- {
-    if(front=-1 && rear=-1)
-    {
-return true;
+    boolean is_empty() {
+        if (front <= -1 && rear <= -1) {
+            return true;
+        }
+        return false;
     }
-    return false;
- }
 
     boolean is_full() {
         front = (front + 1) % size;
