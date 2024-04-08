@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Search {
     // for array- linear search operation
 
@@ -11,6 +13,25 @@ public class Search {
         }
         return -1;
     }
+
+    public static void bubble(Salesman[] a) {
+        for (int i = 0; i < a.length; i++) {
+            boolean v = true;
+            for (int j = 0; j < a.length - 1; j++) {
+                if (a[j].equals(a[j + 1])) {
+                    Salesman temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                    v = false;
+
+                }
+            }
+            if (v) {
+                break;
+            }
+        }
+    }
+
     // public static int searching(String s, String Ss) {
     // for (int i = 0; i < Ss.length(); i++) {
     // // if(Ss.charAt(i)== s){
@@ -34,7 +55,12 @@ public class Search {
         int ind = searching(s, salesmans);
         // if (ind == 1) {
         System.out.println("the index" + ind);
-        // }
+
+        bubble(salesmans);
+        for (int i = 0; i < salesmans.length; i++) {
+            System.out.println(salesmans[i]);
+        }
+        System.out.println(Arrays.toString(salesmans));
 
     }
 }
@@ -64,10 +90,17 @@ class Salesman {
     }
 
     @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return this.prod_id = prod_id + "" + prod_sale;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         Salesman man = (Salesman) obj;
 
-        return this.prod_sale == man.prod_sale && this.prod_sale == man.prod_sale;
+        // return this.prod_sale == man.prod_sale && this.prod_sale == man.prod_sale;
+        return this.prod_sale > man.prod_sale;
     }
 }
