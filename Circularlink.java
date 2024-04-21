@@ -100,12 +100,12 @@ class CreateList {
     }
 }
 
-class Node {
-    public Node(int data2) {
-        // TODO Auto-generated constructor stub
-        this.data = data;
-    }
+// class Node {
+// public Node(int data2) {
+// // TODO Auto-generated constructor stub
+// this.data = data;
+// }
 
-    Node next;
-    int data;
-}
+// Node next;
+// int data;
+// }
