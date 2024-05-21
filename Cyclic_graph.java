@@ -1,4 +1,3 @@
-
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -48,8 +47,9 @@ class Graph {
         boolean visited[] = new boolean[V];
 
         // LinkedList<Integer> queue = new LinkedList<Integer>();
-        Stack<Integer> sw = new Stack<Integer>();
+     Stack<Integer> sw = new Stack<Integer>();
 
+        // java.util.Stack<Integer> sw = new Stack<Integer>();
         visited[s] = true;
         sw.add(s);
 
@@ -69,7 +69,7 @@ class Graph {
     }
 
     void iscycle(int s) {
-        boolean visited[] = new boolean[graph.length];
+        boolean visited[] = new boolean[Graph.length];
 
         // LinkedList<Integer> queue = new LinkedList<Integer>();
         Stack<Integer> sw = new Stack<Integer>();
@@ -81,7 +81,7 @@ class Graph {
             int v = sw.pop();
             if (visited[v] == false) {
                 visited[v] = true;
-                for (int i : graph[v]) {
+                for (int i : Graph[v]) {
                     if (visited[i] == false && sw.indexof(i) >= 0) {
                         System.out.println("yes");
                         f = false;
