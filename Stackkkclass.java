@@ -39,15 +39,15 @@ class Stack_link {
 
 }
 
-class Node {
-  int data;
-  // Node prev;
-  Node next;
+// class Node {
+//   int data;
+//   // Node prev;
+//   Node next;
 
-  Node(int data) {
-    this.data = data;
-  }
-}
+//   Node(int data) {
+//     this.data = data;
+//   }
+// }
 
 class Implem {
   public static void main(String[] args) {
