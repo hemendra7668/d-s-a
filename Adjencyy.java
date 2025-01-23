@@ -4,6 +4,7 @@ import java.util.Queue;
 
 class Adjencyy {
     static int V = 4;
+    @SuppressWarnings("unchecked")
     static ArrayList<Edge> graph[] = new ArrayList[V];
 
     static class Edge {

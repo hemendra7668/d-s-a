@@ -1,6 +1,4 @@
-public class adjency {
-    
-}
+
 class Graph {
     // Inner class to keep track of edges
     class Edge {

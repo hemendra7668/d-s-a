@@ -15,6 +15,7 @@ arl.add(val);
     }
 //create heap is called the heapify
     public void unheapify(){
+        int ci;
         int pi =(ci-1)/2;
         if(arl.get(pi)<arl.get(ci))
         {
